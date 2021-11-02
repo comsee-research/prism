@@ -1,8 +1,7 @@
 PRISM: Plenoptic Raw Image Simulator 
 =====================================================
 
-PRISM is a set of tools to generate and simulate raw images from a multifocus plenoptic camera (e.g., a Raytrix R12) based on the [libpleno].
-
+PRISM is a set of tools to generate and simulate raw images from (multifocus) plenoptic cameras (e.g., a Raytrix R12) based on the [libpleno].
 
 Quick Start
 ===========
@@ -15,7 +14,7 @@ The PRISM applications have a light dependency list:
  * [libpleno], an open-souce C++ library for plenoptic camera,
  
 and was compiled on:
- * Ubuntu 18.04.4 LTS.
+ * Ubuntu 18.04.4 LTS with GCC 7.5.0.
   
 ### Compilation & Test
 
@@ -61,12 +60,29 @@ For instance to images generation:
 ```
 ./src/prism/prism -s scene.js -c camera.js --nrays 30 --vignetting false --run_all true --save_all true -v true -g true -l 7
 ```
+
+Some examples of configuration files are included in the repository. Two applications are included in PRISM.
+
+### Images generation
+
+`prism` generates images based on raytracing according to the scene configuration.
+	
+**Requirements:** camera parameters, scene configuration and number of rays per pixel.
+**Output:** images.
+	
+### Scenes generation
+ 
+`scene` generates randomly valid poses and the scene configuration.
+	
+**Requirements:** min/max depths, number of poses, camera parameters, scene configuration and texture.
+**Output:** poses and scene configuration.
+
   
 Datasets
 ========
 
 Datasets R12-A, R12-B and R12-C can be downloaded [from here](https://github.com/comsee-research/plenoptic-datasets). 
-Same for R12-D, and the simulated _unfocused plenoptic camera_ dataset UPC-S.
+The dataset R12-D, and the simulated _unfocused plenoptic camera_ dataset UPC-S are also available from the link above.
 
 Citing
 ======
