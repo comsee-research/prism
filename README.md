@@ -68,6 +68,7 @@ Some examples of configuration files are included in the repository. Two applica
 `prism` generates images based on raytracing according to the scene configuration.
 	
 **Requirements:** camera parameters, scene configuration and number of rays per pixel.
+
 **Output:** images.
 	
 ### Scenes generation
@@ -75,14 +76,16 @@ Some examples of configuration files are included in the repository. Two applica
 `scene` generates randomly valid poses and the scene configuration.
 	
 **Requirements:** min/max depths, number of poses, camera parameters, scene configuration and texture.
+
 **Output:** poses and scene configuration.
 
   
 Datasets
 ========
 
-Datasets R12-A, R12-B and R12-C can be downloaded [from here](https://github.com/comsee-research/plenoptic-datasets). 
-The dataset R12-D, and the simulated _unfocused plenoptic camera_ dataset UPC-S are also available from the link above.
+* Datasets R12-A, R12-B and R12-C can be downloaded [from here](https://github.com/comsee-research/plenoptic-datasets).
+* The dataset R12-D, and the simulated _unfocused plenoptic camera_ dataset UPC-S are also available [from here](https://github.com/comsee-research/plenoptic-datasets).
+* Datasets R12-E, ES and ELP20 are available [here](https://github.com/comsee-research/plenoptic-datasets).
 
 Citing
 ======
@@ -95,6 +98,15 @@ If you use PRISM or [libpleno] in an academic context, please cite the following
 	  booktitle	=	{Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
 	  pages		=	{2545--2554},
 	  year		=	{2020}
+	}
+	
+or 
+
+	@article{labussiere2021calibration
+	  title	    =	{Leveraging blur information for plenoptic camera calibration},
+	  author	=	{Labussi{\`e}re, Mathieu and Teuli{\`e}re, C{\'e}line and Bernardin, Fr{\'e}d{\'e}ric and Ait-Aider, Omar},
+	  journal	=	{arXiv preprint arXiv:2111.05226},
+	  year		=	{2021}
 	}
 
 
